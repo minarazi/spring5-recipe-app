@@ -1,11 +1,11 @@
 package com.mina.domain;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+
 
 @Entity
 public class UniteOfMeasure {
@@ -16,8 +16,6 @@ public class UniteOfMeasure {
 	
 	private String uom;
 	
-	@OneToOne(cascade = CascadeType.DETACH )
-	private Ingredient ingredient;
 	
 	public Long getId() {
 		return id;

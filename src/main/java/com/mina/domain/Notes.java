@@ -1,10 +1,13 @@
 package com.mina.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.OneToOne;
 
+@Entity
 public class Notes {
 
 	@Id
@@ -13,6 +16,8 @@ public class Notes {
 	
 	@OneToOne
 	private Recipe recipe;
+	@Lob
+	private String recipNotes;
 	public Long getId() {
 		return id;
 	}
@@ -31,5 +36,4 @@ public class Notes {
 	public void setRecipNotes(String recipNotes) {
 		this.recipNotes = recipNotes;
 	}
-	private String recipNotes;
 }
