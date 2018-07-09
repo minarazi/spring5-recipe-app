@@ -12,7 +12,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
-@EqualsAndHashCode(exclude= {"recipes"})
+@EqualsAndHashCode(exclude= {"recipe"})
 @Entity
 public class Category {
 
