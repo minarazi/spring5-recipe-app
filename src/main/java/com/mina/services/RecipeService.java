@@ -7,4 +7,6 @@ import com.mina.domain.Recipe;
 public interface RecipeService {
 
 	public Set<Recipe> getRecipes();
+
+	Recipe findById(Long id);
 }

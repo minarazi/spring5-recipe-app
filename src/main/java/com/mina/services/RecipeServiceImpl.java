@@ -1,6 +1,7 @@
 package com.mina.services;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.stereotype.Service;
@@ -35,8 +36,19 @@ public class RecipeServiceImpl implements RecipeService {
 
 		recipeRepository.findAll().iterator().forEachRemaining(recipes::add);
 		// recipeRepository.findAll().iterator().forEachRemaining(System.out::println);
-
+	
 		return recipes;
 	}
-
+	
+	@Override
+	public Recipe findById( Long id) {
+		Optional<Recipe> recipe = recipeRepository.findById(id);
+		
+		if (!recipe.isPresent()) {
+			
+			throw new RuntimeException("Recipe Not found"); 
+		}
+		
+		return recipe.get();
+	}
 }
