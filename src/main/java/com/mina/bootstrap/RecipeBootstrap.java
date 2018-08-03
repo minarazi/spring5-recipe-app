@@ -134,7 +134,13 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 						+ "To extend a limited supply of avocados, add either sour cream or cottage cheese to your guacamole dip. Purists may be horrified, but so what? It tastes great.\n"
 						+ "\n" + "\n"
 						+ "Read more: http://www.simplyrecipes.com/recipes/perfect_guacamole/#ixzz4jvoun5ws");
+		
 		guaRecipe.setNotes(guaNotes);
+		
+		guaRecipe.setServings(20);
+		guaRecipe.setUrl("http://www.simplyrecipes.com/recipes/perfect_guacamole/#ixzz4jvpiV9Sd");
+		guaRecipe.setSource("simplyrecipes");
+		
 
 		guaRecipe.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUom));
 		guaRecipe.addIngredient(new Ingredient("Kosher salt", new BigDecimal(0.5), teaspoonUom));
